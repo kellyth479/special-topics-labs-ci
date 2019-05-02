@@ -57,7 +57,7 @@ public class SampleAssertJTest {
         // Uncomment and run this test to see what I mean
          assertThat(strings).hasSize(3);
 
-         
+
 
 
     }
