@@ -1,7 +1,7 @@
 pipelineJob('build-pipeline-job') { 
 
   // This is the repo that contains the Jenkinsfile you want to use to define your pipeline
-  def repo = 'https://github.com/jschmersal-cscc/special-topics-labs-ci'
+  def repo = 'https://github.com/kellyth479/special-topics-labs-ci'
 
   description("Your App Pipeline") 
   keepDependencies(false) 
@@ -18,8 +18,8 @@ pipelineJob('build-pipeline-job') {
       scm { 
         git { 
           remote { url(repo) } 
-          branches('master') 
-          scriptPath('Jenkinsfile') // The location of the Jenkinsfile that defines the pipeline job within the repo
+          branches('updates-for-solution')
+          scriptPath('https://github.com/kellyth479/special-topics-labs-ci') // The location of the Jenkinsfile that defines the pipeline job within the repo
           extensions { }  // required as otherwise it may try to tag the repo, which you may not want 
         } 
       } 
