@@ -10,7 +10,7 @@ node {
     echo "#########################################"
     echo "Here begins my code"
     echo "#########################################"
-    sh mvn clean install
+    sh 'mvn clean install'
   }
   try {
           stage('Test') {
