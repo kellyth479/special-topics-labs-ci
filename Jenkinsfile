@@ -16,7 +16,7 @@ node {
   }
   try {
           stage('Test') {
-              sh './gradlew check'
+              sh './src/gradlew check'
           }
       } finally {
           //archiveArtifacts artifacts: '**/*.jar', fingerprint: true
