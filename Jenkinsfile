@@ -10,7 +10,9 @@ node {
     echo "#########################################"
     echo "Here begins my code"
     echo "#########################################"
-    sh 'mvn clean install'
+    withMaven (maven: 'maven3') {
+              sh "mvn package"
+            }
   }
   try {
           stage('Test') {
