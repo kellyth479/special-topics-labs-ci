@@ -19,8 +19,8 @@ node {
               sh './gradlew check'
           }
       } finally {
-          archiveArtifacts artifacts: '**/*.jar', fingerprint: true
-          junit 'build/reports/**/*.xml'
+          //archiveArtifacts artifacts: '**/*.jar', fingerprint: true
+          junit 'target/surefire-reports/*.xml'
       }
 
 }
