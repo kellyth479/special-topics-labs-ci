@@ -19,7 +19,7 @@ pipelineJob('build-pipeline-job') {
         git { 
           remote { url(repo) } 
           branches('updates-for-solution')
-          scriptPath('https://github.com/kellyth479/special-topics-labs-ci') // The location of the Jenkinsfile that defines the pipeline job within the repo
+          scriptPath('jenkinsfile') // The location of the Jenkinsfile that defines the pipeline job within the repo
           extensions { }  // required as otherwise it may try to tag the repo, which you may not want 
         } 
       } 
