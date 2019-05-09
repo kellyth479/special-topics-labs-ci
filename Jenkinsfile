@@ -16,7 +16,7 @@ node {
   }
   try {
           stage('Test') {
-          echo pwd
+          sh pwd
               sh './src/gradlew check'
           }
       } finally {
