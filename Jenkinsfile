@@ -14,13 +14,6 @@ node {
               sh "mvn package"
             }
   }
-  try {
-          stage('Test') {
-              sh './gradlew check'
-          }
-      } finally {
-          //archiveArtifacts artifacts: '**/*.jar', fingerprint: true
-          junit 'target/surefire-reports/*.xml'
+  //archiveArtifacts artifacts: '**/*.jar', fingerprint: true
+  junit 'target/surefire-reports/*.xml'
       }
-
-}
